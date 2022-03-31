@@ -6,15 +6,16 @@ authors = ["Heber Trujillo <heber.trj.urt@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "3.8"
 pandas = "1.2.3"
 pytest = "6.2.2"
-scipy = "1.6.1"
+scipy = "1.8.0"
 wandb = "0.10.21"
 scikit-learn = "0.24.1"
-mlflow = "1.14.1"
+mlflow = "1.24.0"
 omegaconf = "2.0.6"
 matplotlib = "3.2.2"
+Pillow = "8.1.2"
 
 [tool.poetry.dev-dependencies]
 
