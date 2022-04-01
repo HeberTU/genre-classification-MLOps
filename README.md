@@ -32,4 +32,4 @@ and [W&B](https://wandb.ai/site).
     ```
    
 4. Install [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) for mlflow component 
-5. isolation.
+isolation.
