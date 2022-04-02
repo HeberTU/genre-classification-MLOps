@@ -22,7 +22,7 @@ Which contains the following components:
 - data test: Performs deterministic and non-deterministic test.
 - split data: Segregates the data into test and training sets.
 - train: Trains a classification inference artifact.
-- test: TEst the fitter inference artifact. 
+- test: Test the fitter inference artifact. 
 
 ## How to Run Scripts 
 
