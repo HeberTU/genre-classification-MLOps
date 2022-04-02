@@ -8,8 +8,21 @@ Genre Classification with MLOps
 
 ## Repo Overview
 
-This repository shows how to implement an end-to-end machine learning pipeline using [mlflow](https://mlflow.org/) 
+This repository shows how to implement an end-to-end machine learning (ML) pipeline using [mlflow](https://mlflow.org/) 
 and [W&B](https://wandb.ai/site).
+
+The following directional graph shows the implemented ML-pipeline:
+
+![img.png](files/mlpipeline.png)
+
+Which contains the following components:
+
+- download data: Upload the file from the provided url as an artifact to W&B.
+- process data: Removes duplicated rows and perform a minimum feature engineering.
+- data test: Performs deterministic and non-deterministic test.
+- split data: Segregates the data into test and training sets.
+- train: Trains a classification inference artifact.
+- test: Test the fitter inference artifact. 
 
 ## How to Run Scripts 
 
@@ -33,3 +46,23 @@ and [W&B](https://wandb.ai/site).
    
 4. Install [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) for mlflow component 
 isolation.
+
+### Execute Pipeline
+
+The ML-pipeline can be executed:
+
+1. Entirely:
+    ```bash
+    mlflow run .
+    ```
+
+2. Partially:
+   - A single component: 
+       ```bash
+       mlflow run . -P hydra_options="main.execute_steps='random_forest'"
+       ```
+   - More than one component: 
+       ```bash
+       mlflow run . -P hydra_options="main.execute_steps='download,preprocess'"
+       ```
+   
